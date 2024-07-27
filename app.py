@@ -4,10 +4,7 @@ import os
 import random
 
 client = MongoClient(
-    "mongodb+srv://lakshu1000:lakshay1920@mlprojects.n13dkun.mongodb.net/&ssl=true&ssl_cert_reqs=CERT_NONE",
-    serverSelectionTimeoutMS=50000,  # Increase the timeout
-    connectTimeoutMS=50000,
-    socketTimeoutMS=50000
+    "mongodb+srv://lakshu1000:lakshay1920@mlprojects.n13dkun.mongodb.net/&ssl=true&ssl_cert_reqs=CERT_NONE"
 )
 db = client["SastaFlix"]
 users = db["users"]
