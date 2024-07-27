@@ -17,9 +17,8 @@ def get_search_results(query):
     return results
 
 def get_home_results():
-    # results = list(anime_list.find())
-    # results = random.sample(results, len(results))[:20]
-    results = list(anime_list.find({'ename': {'$regex': 'attack', '$options': 'i'}}))[:20]
+    results = list(anime_list.find())
+    results = random.sample(results, len(results))[:20]
     return results
 
 @app.route('/')
@@ -33,7 +32,7 @@ def start():
 def home():
     if 'user_id' not in session:
         return redirect('/login')
-    results = get_home_results()
+    results = get_search_results('attack')
     return render_template('home.html', results = results)
 
 @app.route('/login')
