@@ -4,7 +4,7 @@ import os
 import random
 
 client = MongoClient(
-    "mongodb+srv://lakshu1000:lakshay1920@mlprojects.n13dkun.mongodb.net/",
+    "mongodb+srv://lakshu1000:lakshay1920@mlprojects.n13dkun.mongodb.net/&ssl=true&ssl_cert_reqs=CERT_NONE",
     ssl=True,
     ssl_cert_reqs='CERT_NONE',
     serverSelectionTimeoutMS=50000,  # Increase the timeout
