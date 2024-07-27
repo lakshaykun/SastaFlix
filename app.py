@@ -3,8 +3,12 @@ from pymongo import MongoClient
 import os
 import random
 
-client = MongoClient()
-client = MongoClient("mongodb+srv://lakshu1000:lakshay1920@mlprojects.n13dkun.mongodb.net/")
+client = MongoClient(
+    "mongodb+srv://lakshu1000:lakshay1920@mlprojects.n13dkun.mongodb.net/",
+    serverSelectionTimeoutMS=50000,  # Increase the timeout
+    connectTimeoutMS=50000,
+    socketTimeoutMS=50000
+)
 db = client["SastaFlix"]
 users = db["users"]
 anime_list = db["anime"]
