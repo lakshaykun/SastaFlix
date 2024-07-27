@@ -17,8 +17,9 @@ def get_search_results(query):
     return results
 
 def get_home_results():
-    results = list(anime_list.find())
-    results = random.sample(results, len(results))[:20]
+    # results = list(anime_list.find())
+    # results = random.sample(results, len(results))[:20]
+    results = list(anime_list.find({'ename': {'$regex': 'attack', '$options': 'i'}}))[:20]
     return results
 
 @app.route('/')
