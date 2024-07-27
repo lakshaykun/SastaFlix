@@ -32,7 +32,7 @@ def start():
 def home():
     if 'user_id' not in session:
         return redirect('/login')
-    results = get_search_results('attack')
+    results = get_search_results('attack on titan')
     return render_template('home.html', results = results)
 
 @app.route('/login')
