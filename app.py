@@ -4,8 +4,8 @@ import os
 import random
 
 client = MongoClient()
-client = MongoClient("mongodb://localhost:27017/")
-db = client["Sample_DB"]
+client = MongoClient("mongodb+srv://lakshu1000:lakshay1920@mlprojects.n13dkun.mongodb.net/")
+db = client["SastaFlix"]
 users = db["users"]
 anime_list = db["anime"]
 
